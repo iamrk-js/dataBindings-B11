@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dataBindings';
+  skills : Array<string> = ['HTML5', "CSS3", "JS", "TS", "Angular"]
 }
