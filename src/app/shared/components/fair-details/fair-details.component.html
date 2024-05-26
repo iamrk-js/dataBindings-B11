@@ -1,0 +1,14 @@
+<div class="fair">
+    <div class="banner">
+        <img class="bannerImg" [src]="getfairDetails.bannerUrl" alt="">
+        <div class="info">
+            <h4>{{getfairDetails.fairName}}</h4>
+            <p>Event Type : {{getfairDetails.type}}</p>
+            <p>Deadline : {{((getfairDetails.startDate * 1000) - (86400000)) | date}}</p>
+        </div>
+    </div>
+    <p [innerHTML]="getfairDetails.candidateDescription" class="p-4">
+    </p>
+</div>
+
+<!-- {{getfairDetails | json}} -->

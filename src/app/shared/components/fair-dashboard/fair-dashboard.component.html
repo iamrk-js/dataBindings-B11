@@ -1,0 +1,19 @@
+
+<div class="row">
+    <!-- <div class="col-12">
+        <h1 class="p-2 text-white text-uppercase mb-4 fairsHeading">fairs</h1>
+    </div> -->
+    <!-- <div class="col-md-4">
+        <app-fair-card
+        (emmitFairDetail)="getSelectedFair($event)"
+        [getFair]="fair" *ngFor="let fair of fairsArr"></app-fair-card>
+    </div> -->
+    <div class="col-md-4">
+        <app-fair-card
+        (click)="selectedFair = fair"
+        [getFair]="fair" *ngFor="let fair of fairsArr"></app-fair-card>
+    </div>
+    <div class="col-md-8">
+        <app-fair-details [getfairDetails]="selectedFair"></app-fair-details>
+    </div>
+</div>

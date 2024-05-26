@@ -1,0 +1,53 @@
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <a href="javascript:;"
+        data-framework = 'angular'
+        (click)="selectedFramWork = 'angular'"
+        [ngClass]="{
+            active : selectedFramWork === 'angular'
+        }"
+        class="nav-link ">Angular</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;"
+        data-framework = 'react'
+        (click)="selectedFramWork = 'react'"
+        [ngClass]="{
+            active : selectedFramWork === 'react'
+        }"
+        class="nav-link">React</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;"
+        data-framework = 'vue'
+        (click)="selectedFramWork = 'vue'"
+        [ngClass]="{
+            active : selectedFramWork === 'vue'
+        }"
+        class="nav-link">Vue</a>
+    </li>
+</ul>
+
+<div class="tab-content mt-4">
+    <div class="card" *ngIf="selectedFramWork === 'angular'">
+        <div class="card-body">
+            <strong>Angular</strong>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid perferendis corporis omnis, excepturi ipsam
+            magni ducimus adipisci possimus est dolorem, ipsum sint error amet? Dignissimos!
+        </div>
+    </div>
+    <div class="card" *ngIf="selectedFramWork === 'react'">
+        <div class="card-body">
+            <strong>React</strong>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid perferendis corporis omnis, excepturi ipsam
+            magni ducimus adipisci possimus est dolorem, ipsum sint error amet? Dignissimos!
+        </div>
+    </div>
+    <div class="card" *ngIf="selectedFramWork === 'vue'">
+        <div class="card-body">
+            <strong>Vue</strong>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid perferendis corporis omnis, excepturi ipsam
+            magni ducimus adipisci possimus est dolorem, ipsum sint error amet? Dignissimos!
+        </div>
+    </div>
+</div>

@@ -1,0 +1,108 @@
+<!-- <p class="alert alert-info" *ngIf="val === 5">The value is 5</p>
+<p class="alert alert-info" *ngIf="val === 10">The value is 10</p>
+<p class="alert alert-info" *ngIf="val === 15">The value is 15</p> -->
+
+
+<!-- <div [ngSwitch]="val">
+    <p class="alert alert-info" *ngSwitchCase="'5'">The value is 5</p>
+    <p class="alert alert-info"  *ngSwitchCase="'10'">The value is 10</p>
+    <p class="alert alert-info"  *ngSwitchCase="'15'">The value is 15</p>
+    <p class="alert alert-info"  *ngSwitchDefault>The value is any thing</p>
+</div> -->
+<!-- 
+<ul class="nav nav-pills mb-4">
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link"
+        [ngClass]="{
+            active : price === '5'
+        }"
+        (click)="price = '5'"
+        >
+            Set price to 5
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link"
+        [ngClass]="{
+            active : price === '10'
+        }"
+        (click)="price = '10'"
+        >
+            Set price to 10
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link"
+        [ngClass]="{
+            active : price === '15'
+        }"
+        (click)="price = '15'"
+        >
+            Set price to 15
+        </a>
+    </li>
+</ul>
+
+
+<div [ngSwitch]="price">
+    <p class="alert alert-info" *ngSwitchCase="'5'">The value is 5</p>
+    <p class="alert alert-info" *ngSwitchCase="'10'">The value is 10</p>
+    <p class="alert alert-info"  *ngSwitchCase="'15'">The value is 15</p>
+</div> -->
+
+
+<ul class="nav nav-pills mb-4">
+    <li class="nav-item">
+        <a href="javascript:;"
+        [ngClass]="{
+            active : selectedFramework === 'angular'
+        }"
+        class="nav-link text-uppercase"
+        (click)="selectedFramework = 'angular'"
+        >
+            angular
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" 
+        [ngClass]="{
+            active : selectedFramework === 'react'
+        }"
+        class="nav-link text-uppercase"
+        (click)="selectedFramework = 'react'"
+
+        >
+            react
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;"
+        [ngClass]="{
+            active : selectedFramework === 'vue'
+        }"
+        class="nav-link text-uppercase"
+        (click)="selectedFramework = 'vue'"
+        >
+            vue
+        </a>
+    </li>
+</ul>
+
+
+<ng-container [ngSwitch]="selectedFramework">
+    <p class="alert alert-info" *ngSwitchCase="'angular'">
+        <strong>Angular</strong>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid perferendis corporis omnis, excepturi ipsam
+        magni ducimus adipisci possimus est dolorem, ipsum sint error amet? Dignissimos!
+    </p>
+    <p class="alert alert-info"  *ngSwitchCase="'react'">
+        <strong>React</strong>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid perferendis corporis omnis, excepturi ipsam
+        magni ducimus adipisci possimus est dolorem, ipsum sint error amet? Dignissimos!
+    </p>
+    <p class="alert alert-info"  *ngSwitchCase="'vue'">
+        <strong>Vue</strong>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid perferendis corporis omnis, excepturi ipsam
+        magni ducimus adipisci possimus est dolorem, ipsum sint error amet? Dignissimos!
+    </p>
+</ng-container>

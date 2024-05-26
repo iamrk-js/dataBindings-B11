@@ -1,1 +1,43 @@
-<p>The Product is {{getProductName()}} with id {{productId}}</p>
+<!-- <div>
+    {{resp}}
+</div> -->
+<!-- <div [innerHTML]="resp">
+
+</div> -->
+<!-- style >> [ngStyle] >> conditionaly -->
+<!-- class >> [ngClass]  >> conditionaly  -->
+
+<!-- [ngClass]="{'className' : condition}" -->
+<p 
+[ngStyle]="{
+    backgroundColor : isProdAvailble ? 'orange' : '#ccc'
+}"
+
+[ngClass]="{
+    'text-white' : isProdAvailble,
+    'text-danger' : !isProdAvailble,
+    'p-4' : isProdAvailble,
+    'p-3' : !isProdAvailble
+    }"
+
+>The Product is {{productName}}
+    with id {{productId}} and 
+    <strong *ngIf="isProdAvailble; else outOfStock">Product is availbale</strong>
+
+    <ng-template #outOfStock>
+        <strong>Product is out of stock</strong>
+    </ng-template>
+    
+</p>
+<!-- 
+<input type="text" [value]="userName" class="form-control">
+// ele.style.fontSize
+
+<img [src]="imgUrl"  class="img-fluid"> -->
+<!-- <strong [innerHTML]="productName">
+
+</strong>
+<hr>
+<strong [innerText]="'Iphone'">
+
+</strong> -->

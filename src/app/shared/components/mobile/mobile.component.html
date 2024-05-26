@@ -1,0 +1,69 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4"
+        [ngClass]="{
+            'notAval' : !mobile.isAvailable
+        }"
+        *ngFor="let mobile of mobileProducts">
+            <p class="noProdAvl" *ngIf="!mobile.isAvailable">
+                Product is not available
+            </p>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <!-- <div class="imgContainer">
+                            <img 
+                            [src]="mobile.image" 
+                            [alt]="mobile.name"
+                            [title]="mobile.name" class="img-fluid"
+                            *ngIf="mobile.image; else noImgPlaceholder"
+                            >
+                            <ng-template #noImgPlaceholder>
+                                <img src="https://placehold.co/600x400"    
+                                [alt]="mobile.name"
+                                [title]="mobile.name" class="img-fluid">
+                            </ng-template>
+                        </div> -->
+
+                        <!-- <div class="imgContainer">
+                            <img 
+                            [src]="mobile.image ? mobile.image : 'https://placehold.co/600x400'" 
+                            [alt]="mobile.name"
+                            [title]="mobile.name" class="img-fluid"
+                            >
+                        </div> -->
+
+                        <div class="imgContainer">
+                            <img [src]="mobile.image" [alt]="mobile.name" [title]="mobile.name" class="img-fluid"
+                                *ngIf="mobile.image; else noImg">
+
+                            <ng-template #noImg>
+                                <p class="noImage text-muted m-0 d-flex justify-content-center align-items-center">
+                                    Product Image is not available
+                                </p>
+                            </ng-template>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <h4>
+                            {{mobile.name}} 
+                             <small 
+                            class="text-white p-1 rating"
+                            [ngClass]="{
+                                'bg-success' : mobile.rating >= 4,
+                                'bg-warning' : mobile.rating >= 3 && mobile.rating < 4,
+                                'bg-danger' : mobile.rating < 3
+                            }"
+                            >
+                                {{mobile.rating}}*
+                            </small>
+                        </h4>
+                        <p class="rating">
+                           
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
